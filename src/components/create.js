@@ -21,26 +21,26 @@ export function Create(props) {
       </header>
 
       <h2>Create new CryptoPizza</h2>
+      <div className="back">
+        <div className="pizza-container">
+          <img
+            className="pizza-frame"
+            alt="pizza frame"
+            src="https://studio.ethereum.org/static/img/cryptopizza/container.jpg"
+          />
+          <img
+            alt="pizza"
+            src="https://studio.ethereum.org/static/img/cryptopizza/corpus.png"
+          />
 
-      <div className="pizza-container">
-        <img
-          className="pizza-frame"
-          alt="pizza frame"
-          src="https://studio.ethereum.org/static/img/cryptopizza/container.jpg"
-        />
-        <img
-          alt="pizza"
-          src="https://studio.ethereum.org/static/img/cryptopizza/corpus.png"
-        />
-
-        <div id="pizza-ingredients-container" className="ingredients">
-          {toppings.map((topping, id) => (
-            <div>{topping}</div>
-          ))}
+          <div id="pizza-ingredients-container" className="ingredients">
+            {toppings.map((topping, id) => (
+              <div>{topping}</div>
+            ))}
+          </div>
         </div>
       </div>
-
-      <div>
+      <div className="form">
         <form className="input-container" onSubmit={onSubmit}>
           <input
             type="text"

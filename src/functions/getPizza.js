@@ -1,11 +1,11 @@
 import Web3 from 'web3'
 import CryptoPizza from '../contracts/CryptoPizza.json'
-import { contract1 } from '../lib/constants.js'
+import { contract } from '../lib/constants.js'
 
 export async function getPizza(address) {
   const dataList = []
   const web3 = new Web3(Web3.givenProvider)
-  const todo = new web3.eth.Contract(CryptoPizza.abi, contract1)
+  const todo = new web3.eth.Contract(CryptoPizza.abi, contract)
 
   const ids = await todo.methods.getPizzasByOwner(address).call()
 

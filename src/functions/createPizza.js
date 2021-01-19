@@ -1,6 +1,6 @@
 import Web3 from 'web3'
 import CryptoPizza from '../contracts/CryptoPizza.json'
-import { contract1 } from '../lib/constants.js'
+import { contract } from '../lib/constants.js'
 
 const createRandomPizza = (value, accounts) =>
   new Promise((resolve, reject) => {
@@ -8,7 +8,7 @@ const createRandomPizza = (value, accounts) =>
     console.log(value)
     const web3 = new Web3(Web3.givenProvider)
     const account = accounts.toString()
-    const todo = new web3.eth.Contract(CryptoPizza.abi, contract1)
+    const todo = new web3.eth.Contract(CryptoPizza.abi, contract)
 
     console.log('account = ', account)
 

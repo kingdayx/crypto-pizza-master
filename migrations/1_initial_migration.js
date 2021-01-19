@@ -1,5 +1,5 @@
-const OTRCPT = artifacts.require('OTRCPartyToken')
+const CryptoPizza = artifacts.require('./CryptoPizza.sol')
 
 module.exports = function (deployer) {
-  deployer.deploy(OTRCPT)
+  deployer.deploy(CryptoPizza)
 }
