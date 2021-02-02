@@ -4,6 +4,7 @@ import { Inventory } from './inventory'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import '../App.css'
 import { Create } from './create'
+import Party from './party'
 
 export default function Toggle(props) {
   return (
@@ -20,6 +21,11 @@ export default function Toggle(props) {
             Inventory
           </button>
         </Link>
+        <Link to="/stake">
+          <button id="inventory-tab" className="tablinks">
+            Stake
+          </button>
+        </Link>
         <Switch className="tab">
           <Route path="/create">
             <Create
@@ -30,6 +36,9 @@ export default function Toggle(props) {
           </Route>
           <Route path="/inventory">
             <Inventory gas={props.input} accounts={props.accounts} />
+          </Route>
+          <Route path="/stake">
+            <Party gas={props.input} accounts={props.accounts} />
           </Route>
         </Switch>
       </Router>

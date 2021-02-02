@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.party{
+  display: flex;
+}
+
 body {
   background-color: #725ba4;
   color: #fce8df;
